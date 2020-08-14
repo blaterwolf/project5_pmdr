@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css");
+@font-face {
+  font-family: "Digital";
+  src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot");
+  src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.svg#Digital-7")
+      format("svg");
+}
+
+$tomato-red: #ff8784;
+$white: #ffffff;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  height: 100vh;
+  background: $tomato-red;
+}
+
+.pomodoro-title {
+  margin-bottom: 10px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 900;
+  font-size: 3em;
+}
+
+.main-container-class {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  .main-control {
+    font-family: "Quicksand", sans-serif;
+    text-align: center;
+    .break-label,
+    .session-label {
+      font-weight: 900;
+      font-size: 1.5em;
+      width: 250px;
+      margin-bottom: 10px;
+    }
+    button {
+      margin: 0px 10px;
+      border: none;
+      background: none;
+      border: 1px solid white;
+      border-radius: 5px;
+      &:hover {
+        background: white;
+      }
+    }
+    .btn-class {
+      display: inline-block;
+      padding: 5px 10px;
+      font-weight: 900;
+      font-size: 1.5em;
+    }
+  }
+}
+
+.timer-border {
+  padding: 10px;
+  border: 10px solid #111111;
+  width: 300px;
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 10px;
+  .timer-wrapper {
+    font-family: "Quicksand", sans-serif;
+    .time-left {
+      font-family: "Digital";
+      font-size: 60px;
+    }
+  }
+  .controls-timer {
+    margin-top: 5px;
+    button {
+      border: none;
+      background: none;
+      padding: 5px 10px;
+      margin: 0px 5px;
+      border: 1px solid white;
+      border-radius: 5px;
+      &:hover {
+        background: white;
+      }
+    }
+    .fa-play,
+    .fa-pause,
+    .fa-sync {
+      font-weight: 900;
+      font-size: 2em;
+    }
+  }
+}
+
+.footer {
+  text-align: center;
+  font-size: 1em;
+  margin-top: 10px;
+  color: #111111;
+  width: 375px;
+  .icon-list {
+    display: flex;
+    justify-content: center;
+    flex-flow: row nowrap;
+    font-size: 2em;
+    padding: 5px;
+    .fa-html5 {
+      color: #f06529;
+    }
+    .fa-css3 {
+      color: #2965f1;
+    }
+    .fa-js-square {
+      color: #f0db4f;
+    }
+    .fa-sass {
+      color: #cc6699;
+    }
+    .fa-react {
+      color: #61dbfb;
+    }
+    .fa-free-code-camp {
+      background-color: #0a0a23;
+      color: white;
+      border-radius: 5px;
+      margin: 5px;
+    }
+    .fa-html5,
+    .fa-css3,
+    .fa-js-square,
+    .fa-sass,
+    .fa-react {
+      margin: 5px;
+    }
+  }
+  .link-hooks {
+    a {
+      color: red;
+    }
+  }
+}
