@@ -75,11 +75,8 @@ const Pomodoro = () => {
           title === "Session" ? breakState * 60 : sessionState * 60
         );
         audio.play();
-        console.log(title, "did title changed?");
-        console.log(currentTime, "did currentTime changed?");
       } else {
         setCurrentTime(currentTime - 1);
-        console.log(currentTime);
       }
     },
     isPlaying ? 1000 : null
@@ -88,12 +85,8 @@ const Pomodoro = () => {
   const handlePlayPause = () => {
     if (isPlaying) {
       setIsPlaying(false);
-      console.log(currentTime, "when paused");
-      console.log(isPlaying);
     } else {
       setIsPlaying(true);
-      console.log(currentTime, "when played");
-      console.log(isPlaying);
     }
   };
 
