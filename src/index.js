@@ -67,6 +67,7 @@ const Pomodoro = () => {
   const [currentTime, setCurrentTime] = useState(25 * 60);
   const [title, setTitle] = useState("Session");
   const [isPlaying, setIsPlaying] = useState(false);
+  const [sessionCount, setSessionCount] = React.useState(1);
 
   useInterval(
     () => {
@@ -74,6 +75,9 @@ const Pomodoro = () => {
         setTitle(title === "Session" ? "Break" : "Session");
         setCurrentTime(
           title === "Session" ? breakState * 60 : sessionState * 60
+        );
+        setSessionCount((prevCount) =>
+          title === "Session" ? prevCount + 1 : prevCount
         );
         audio.play();
       } else {
@@ -105,6 +109,7 @@ const Pomodoro = () => {
     setCurrentTime(25 * 60);
     setTitle("Session");
     setIsPlaying(false);
+    setSessionCount(1);
     audio.pause();
     audio.currentTime = 0;
   };
@@ -173,7 +178,9 @@ const Pomodoro = () => {
       )}
       <div className="timer-border">
         <div className="timer-wrapper">
-          <h2 id="timer-label">{title}</h2>
+          <h2 id="timer-label">
+            {title === "Session" ? `${title} ${sessionCount}` : `${title}`}
+          </h2>
           <div id="time-left" className="time-left">
             {convertTime(currentTime)}
           </div>

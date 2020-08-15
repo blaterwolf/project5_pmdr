@@ -10,6 +10,7 @@ const Footer = () => {
         <i className="fab fa-js-square" />
         <i className="fab fa-sass" />
         <i className="fab fa-react" />
+        <i className="fab fa-font-awesome" />
         <i className="fab fa-free-code-camp" />
       </section>
       <section className="link-hooks">
